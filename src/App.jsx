@@ -179,6 +179,22 @@ function App() {
   useEffect(() => {
     localStorage.setItem("sweetCrumbsCart", JSON.stringify(cart));
   }, [cart]);
+  // Close product modal with Escape key
+useEffect(() => {
+  const handleEscape = (event) => {
+    if (event.key === "Escape") {
+      setSelectedProduct(null);
+    }
+  };
+
+  if (selectedProduct) {
+    window.addEventListener("keydown", handleEscape);
+  }
+
+  return () => {
+    window.removeEventListener("keydown", handleEscape);
+  };
+}, [selectedProduct]);
 
   // Admin form update
   const updateProductForm = (e) => {

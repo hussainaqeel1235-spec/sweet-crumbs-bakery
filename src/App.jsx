@@ -31,14 +31,14 @@ const initialProducts = [
     soldOut: false
   },
   {
-    id: 4,
-    name: "Chocolate Cupcakes",
-    category: "Cupcakes",
-    price: 600,
-    image: "https://images.unsplash.com/photo-1426869981800-95ebf51ce900?w=600",
-    desc: "Chocolate cupcakes topped with rich frosting.",
-    soldOut: false
-  },
+  id: 4,
+  name: "Chocolate Cupcakes",
+  category: "Cupcakes",
+  price: 600,
+  image: "https://phippsbakerycafe.ca/cdn/shop/files/Chocolate_Cupcake_Pack_x_6.jpg?v=1760642367&width=1920",
+  desc: "Chocolate cupcakes topped with rich frosting.",
+  soldOut: false
+},
   {
     id: 5,
     name: "Fudge Brownies",
@@ -530,18 +530,6 @@ Thank you for ordering from Sweet Crumbs Bakery!
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
           <a href="#cart">Cart ({cartCount})</a>
-
-          <button
-            type="button"
-            className="admin-nav-button"
-            onClick={() => {
-              setShowAdmin(!showAdmin);
-              setEditingId(null);
-              setProductForm(emptyForm);
-            }}
-          >
-            {showAdmin ? "Close Admin" : "Admin"}
-          </button>
         </nav>
 
         <a href="#menu" className="nav-button">
